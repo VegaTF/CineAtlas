@@ -1,0 +1,132 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital@0;1&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,300;1,300&display=swap');
+
+:root {
+    --primary-color: #171717;
+    --secondary-color: #de2547;
+    --background-color: #ffffff;
+    --text-color: #333;
+    --text-button-color: #ffffff;
+    --font-family: "Montserrat", sans-serif;
+    --font-weight-titulos: 300;
+    --font-weight-texto: 400;
+    --color-hover: color-mix(in hsl shorter hue, var(--secondary-color) 100%, #000000 19.4%);
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    background-color: var(--background-color);
+    box-sizing: border-box;
+    font-family: var(--font-family);
+    font-optical-sizing: auto;
+    font-weight: var(--font-weight-texto);
+    font-style: normal;
+    color: var(--text-color);
+    
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-weight: var(--font-weight-titulos);
+    font-style: normal;
+}
+
+h1 {
+    font-size: 3em;
+}
+
+h2 {
+    font-size: 2.5em;
+}
+
+h3 {
+    font-size: 2em;
+}
+
+p {
+    margin: 0 0 1em 0;
+}
+
+/* Estilos para enlaces */
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+a:hover, a:focus, a:active {
+    color: var(--color-hover);
+    text-decoration: underline;
+}
+
+/* Estilos para listas */
+ul, ol {
+    padding-left: 20px;
+    text-decoration: none;
+}
+
+li {
+  display: inline-block;
+}
+
+/* Estilos para tablas */
+table {
+    border-collapse: collapse;
+    width: 100%;
+}
+
+/* Botones */
+.btn {
+    background-color: var(--secondary-color);
+    color: var(--text-button-color);
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+}
+
+.btn:hover, .btn:focus, .btn:active {
+    background-color: var(--color-hover);
+    position: relative;
+    top: -1px;
+}
+
+/* Iconos */
+
+.icon {
+  width: 60px;
+  height: auto;
+}
+
+h2:has(.icon) {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+/* HEader */
+
+#logo {
+  width: 100%;
+  max-width: 140px;
+  padding: 10px;
+  height: auto;
+}
+
+nav#menu {
+  display: flex;
+  width: 100%;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  gap: 20px;
+}
+
+nav#menu a {
+  color: var(--secondary-color);
+  font-size: 1em;
+  padding: 0 10px;
+}
+
+nav#menu a:hover, nav#menu a:focus, nav#menu a:active {
+  color: var(--color-hover);
+  text-decoration: underline;
+}
