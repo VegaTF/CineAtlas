@@ -160,3 +160,17 @@ nav#menu a:hover, nav#menu a:focus, nav#menu a:active {
   background-color: var(--secondary-color);
   margin: 10px auto 0 auto; /* Centra la línea */
 }
+
+/* Footer negro y rojo */
+
+footer {
+  background-color: var(--primary-color);
+  color: var(--secondary-color);
+  text-align: center;
+  padding: 20px;
+  margin-top: 60px; /* Separación con el contenido */
+}
+
+footer p {
+  margin: 0;
+}
