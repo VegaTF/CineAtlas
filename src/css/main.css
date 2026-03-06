@@ -141,3 +141,22 @@ nav#menu a:hover, nav#menu a:focus, nav#menu a:active {
   color: var(--color-hover);
   text-decoration: none; /* Quito el subrayado de los enlaces del menú cuando tengo el cursor encima */
 }
+
+/* Títulos de sección */
+
+.section-title {
+  text-align: center;
+  text-transform: uppercase; /* Siempre en mayúsculas */
+  margin: 40px 0; /* Centrado con espacio arriba y abajo*/
+  position: relative;
+}
+
+/* Línea roja debajo del título */
+.section-title::after {
+  content: "";
+  display: block;
+  width: 200px;
+  height: 3px;
+  background-color: var(--secondary-color);
+  margin: 10px auto 0 auto; /* Centra la línea */
+}
