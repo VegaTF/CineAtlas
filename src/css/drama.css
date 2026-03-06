@@ -1,0 +1,119 @@
+/* CONTENEDOR GENERAL */
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+/* INTRODUCCIÓN */
+
+.intro__images {
+  display: flex;
+  gap: 20px;
+  margin: 30px 0;
+}
+
+/* Mantener la proporción */
+.intro__image {
+  flex: 1;
+  aspect-ratio: 16 / 9;
+  overflow: hidden;
+}
+
+.intro__image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* Recortar sin deformar */
+  object-position: center;
+  display: block;
+}
+
+.intro__text {
+  display: flex;
+  gap: 40px;
+  margin-bottom: 30px;
+}
+
+.intro__text p {
+  flex: 1;
+  line-height: 1.6;
+}
+
+/* CATÁLOGO */
+
+.catalogo {
+  margin-top: 20px;
+}
+
+.item {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 40px;
+  margin: 40px 0;
+}
+
+/* Alterna el orden */
+.item:nth-child(even) {
+  flex-direction: row-reverse;
+}
+
+.item__texto,
+.item__media {
+  flex: 1;
+  min-width: 280px;
+
+  display: flex;
+  flex-direction: column;
+}
+
+.item__desc {
+  line-height: 1.6;
+}
+
+/* Botón del item alineado a la derecha */
+.item__btn {
+  align-self: flex-end;
+  margin-top: 20px;
+}
+
+/* Imagen del catálogo con tamaño consistente */
+.item__media {
+  aspect-ratio: 16 / 9;
+  overflow: hidden;
+}
+
+.item__img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  display: block;
+}
+
+/* RESPONSIVE */
+
+@media (max-width: 768px) {
+  .intro__images {
+    flex-direction: column;
+  }
+
+  .intro__text {
+    flex-direction: column;
+  }
+
+  .item,
+  .item:nth-child(even) {
+    flex-direction: column;
+  }
+}
+
+/* SOBRESCRIBIR MAIN */
+/* Botones como enlace */
+.btn,
+.btn:hover,
+.btn:focus,
+.btn:active {
+  color: var(--text-button-color);
+  text-decoration: none;
+}
