@@ -18,7 +18,9 @@
         <link rel="manifest" href="../assets/icons/site.webmanifest">
         <link rel="stylesheet" href="../src/css/normalize.css">
         <link rel="stylesheet" href="../src/css/main.css">
+        <link rel="stylesheet" href="../src/css/animacion.css">
     </head>
+    <body>
         <!--[if lt IE 7]>
             <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="#">upgrade your browser</a> to improve your experience.</p>
         <![endif]-->
@@ -38,12 +40,87 @@
                 </ul>
             </nav>
         </header>
-        <main id="home">
-            <section id="animacion">
-                <h2 class="section-title">Animación</h2>
-                <p>Texto de introducción o historia</p>
-                <p><button class="btn">Explorar</button></p>
-            </section>
+        <main class="genre-page">
+            <div class="container">
+                <section  class="genre" id="animacion">
+                    <!-- Título de la sección -->
+                    <h2 class="section-title">Animación</h2>
+
+                    <!-- INTRO -->
+                    <section class="intro" aria-label="Introducción del género Animación">
+                        <div class="intro__images">
+                            <div class="intro__image">
+                                <img src="../assets/img/animacion/My_Neighbour_Totoro_043.jpg" alt="Escena de la película Mi Vecino Totoro">
+                            </div>
+                            <div class="intro__image">
+                                <img src="../assets/img/animacion/Coco_059.jpg" alt="Escena de la película Coco">
+                            </div>
+                        </div>
+
+                        <div class="intro__text">
+                            <p>
+                                Muchas veces se piensa que la animación está orientada a un público infantil, pero no siempre es así.
+                                Hay películas y series de animación que logran convertir algo tan complejo como las emociones humanas
+                                en imágenes llenas de magia.
+                            </p>
+
+                            <p>
+                                En CineAtlas te daremos recomendaciones que te adentren en estos mundos visualmente hermosos de
+                                personajes realmente expresivos, que cuentan historias profundas y difíciles de olvidar.
+                            </p>
+                        </div>
+                    </section>
+
+                    <!-- CATÁLOGO -->
+                    <section class="catalogo" aria-label="Películas y series de Animación">
+                        <article class="item">
+                            <div class="item__texto">
+                                <h3 class="item__titulo">Spirited Away</h3>
+                                <p class="item__desc">
+                                    Creada y envuelta en imágenes delicadas y llenas de vida por Hayao Miyazaki para Studio Ghibli.<br>
+                                    La belleza de Spirited Away está en cómo mezcla fantasía y emociones reales
+                                    a través de la protagonista, Chihiro, que está en un mundo mágico lleno de espíritus.<br>
+                                    La película habla sobre crecer, encontrar valor y no perder quién eres.
+                                </p>
+
+                                <a class="btn item__btn"
+                                    href="https://www.imdb.com/es-es/title/tt0245429/"
+                                    target="_blank"
+                                    rel="noopener noreferrer">
+                                    Ver en IMDb
+                                </a>
+                            </div>
+
+                            <div class="item__media">
+                                <img class="item__img" src="../assets/img/animacion/Spirited_Away_058.jpg" alt="El viaje de Chihiro">
+                            </div>
+                        </article>
+
+                        <article class="item">
+                            <div class="item__texto">
+                                <h3 class="item__titulo">March Comes in Like a Lion</h3>
+                                <p class="item__desc">
+                                En este caso Chica Umino nos muestra con una sensibilidad exquisita cómo las pequeñas conexiones
+                                humanas pueden ayudar a alguien a sanar y volver a encontrar luz.<br>
+                                La belleza de March Comes in Like a Lion está en cómo convierte los sentimientos más silenciosos
+                                como la soledad, la tristeza y la esperanza en imágenes delicadas y muy simbólicas.
+                                </p>
+
+                                <a class="btn item__btn"
+                                    href="https://www.imdb.com/es-es/title/tt6074794/"
+                                    target="_blank"
+                                    rel="noopener noreferrer">
+                                    Ver en IMDb
+                                </a>
+                            </div>
+
+                            <div class="item__media">
+                                <img class="item__img" src="../assets/img/animacion/March_Comes_In_Like_A_Lion.jpg" alt="El león de Marzo">
+                            </div>
+                        </article>
+                    </section>
+                </section>
+            </div>
         </main>
         <footer>
             <p>&copy; 2026 CineAtlas. Todos los derechos reservados.</p>
