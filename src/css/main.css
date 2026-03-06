@@ -102,7 +102,13 @@ h2:has(.icon) {
   gap: 10px;
 }
 
-/* HEader */
+/* Header / Menú principal */
+
+/* Barra superior negra */
+header {
+  background-color: var(--primary-color);
+  width: 100%;
+}
 
 #logo {
   width: 100%;
@@ -111,6 +117,7 @@ h2:has(.icon) {
   height: auto;
 }
 
+/* Contenedor del menú */
 nav#menu {
   display: flex;
   width: 100%;
@@ -118,8 +125,12 @@ nav#menu {
   justify-content: space-between;
   align-items: center;
   gap: 20px;
+  max-width: 1200px; /* Limito la anchura máxima del menú para pantallas muy grandes */
+  margin: auto; /* Centro el menú */
+  padding: 10px 20px; /* Añado márgenes interiores*/
 }
 
+/* Enlaces del menú */
 nav#menu a {
   color: var(--secondary-color);
   font-size: 1em;
@@ -128,5 +139,38 @@ nav#menu a {
 
 nav#menu a:hover, nav#menu a:focus, nav#menu a:active {
   color: var(--color-hover);
-  text-decoration: underline;
+  text-decoration: none; /* Quito el subrayado de los enlaces del menú cuando tengo el cursor encima */
+}
+
+/* Títulos de sección */
+
+.section-title {
+  text-align: center;
+  text-transform: uppercase; /* Siempre en mayúsculas */
+  margin: 40px 0; /* Centrado con espacio arriba y abajo*/
+  position: relative;
+}
+
+/* Línea roja debajo del título */
+.section-title::after {
+  content: "";
+  display: block;
+  width: 200px;
+  height: 3px;
+  background-color: var(--secondary-color);
+  margin: 10px auto 0 auto; /* Centra la línea */
+}
+
+/* Footer negro y rojo */
+
+footer {
+  background-color: var(--primary-color);
+  color: var(--secondary-color);
+  text-align: center;
+  padding: 20px;
+  margin-top: 60px; /* Separación con el contenido */
+}
+
+footer p {
+  margin: 0;
 }
