@@ -41,19 +41,63 @@
         </header>
         <main id="home">
             <section class="hero">
-                <h1>CineAtlas</h1>
-                <p>Texto del hero</p>
+                <video id="hero-video" src="./assets/video/hero_optimizado.mp4" autoplay muted loop></video>
+                <div class="hero-text">
+                    <h1 class="section-title"><img class="icon finn" src="./assets/icons/pages/home/finn.svg" alt="Finn Icon" /> CineAtlas</h1>
+                    <p class="subtitle">¡El cine como nunca antes lo habías vivido!</p>
+                </div>
             </section>
-
-            <section id="bienvenida">
-                <h2>Bienvenido a CineAtlas <img class="icon finn" src="./assets/icons/pages/home/finn.svg" alt="Finn Icon"/></h2>
-                <p>Texto de introducción o historia</p>
-                <p><button class="btn">Explorar</button></p>
-            </section>
-
-            <section>
-                
-            </section>
+            <div class="container">
+                <section id="bienvenida">
+                    <h2>Bienvenido a CineAtlas</h2>
+                    <article id="terminator_salvation_film" class="texto_foto">
+                        <div class="listado_imagen">
+                            <img src="./assets/img/animacion/My_Neighbour_Totoro_043.jpg" alt="Escena de la película My Neighbour Totoro">
+                        </div>
+                        <div class="listado_texto">
+                            <p>En esta web podrás explorar una <strong>amplia variedad de películas</strong> y descubrir nuevas recomendaciones basadas en tus gustos.</p>
+                            <p>Desde clásicos del cine hasta estrenos actuales, contamos con una colección curada especialmente para ti. Nuestro sistema inteligente analiza tus preferencias y te sugiere películas que se alinean perfectamente con tus intereses, garantizando que siempre encuentres algo nuevo y emocionante para ver.</p>
+                            <p>Navega por nuestras categorías, lee reseñas y encuentra tu próxima película favorita. ¡Enjoy CineAtlas!</p>
+                        </div>
+                    </article>
+                    </section>
+                <section id="categorias">
+                    <h2>Explora por categorías</h2>
+                    <div class="categorias_grid">
+                        <a href="./pages/terror.html" class="categoria_card"
+                            style="background-image: url('./assets/img/terror/hill-house.jpg');">
+                            <h3>Terror</h3>
+                        </a>
+                        <a href="./pages/drama.html" class="categoria_card"
+                            style="background-image: url('./assets/img/drama/breaking-bad.jpg');">
+                            <h3>Drama</h3>
+                        </a>
+                        <a href="./pages/animacion.html" class="categoria_card"
+                            style="background-image: url('./assets/img/animacion/Spirited_Away_058.jpg');">
+                            <h3>Animación</h3>
+                        </a>
+                        <a href="./pages/historicas.html" class="categoria_card"
+                            style="background-image: url('./assets/img/historicas/peaky blinders.jpg');">
+                            <h3>Históricas</h3>
+                        </a>
+                        <a href="./pages/cienciaficcion.html" class="categoria_card"
+                            style="background-image: url('./assets/img/cienciaficcion/interestelar.jpg');">
+                            <h3>Ciencia Ficción</h3>
+                        </a>
+                        <a href="./pages/fantasia.html" class="categoria_card"
+                            style="background-image: url('./assets/img/fantasia/narnia.jpg');">
+                            <h3>Fantasía</h3>
+                        </a>
+                        <a href="./pages/romanticas.html" class="categoria_card"
+                            style="background-image: url('./assets/img/romanticas/titanic.jpg');">
+                            <h3>Románticas</h3>
+                        </a>
+                        <a href="./pages/accion.html" class="categoria_card"
+                            style="background-image: url('./assets/img/accion/the_batman.jpg');">
+                            <h3>Acción</h3>
+                        </a>
+                </section>
+            </div>
         </main>
         <footer>
             <p>&copy; 2026 CineAtlas. Todos los derechos reservados.</p>
