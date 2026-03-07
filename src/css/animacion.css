@@ -128,3 +128,67 @@ h3.section-title::after {
   width: 150px;
   height: 2px;
 }
+
+/* RANKING */
+.ranking {
+  width: 100%;
+  margin-bottom: 40px;
+}
+.ranking table {
+  max-width: 500px;
+  text-align: center;
+  margin: 0 auto;
+  border: 1px solid rgb(207, 207, 207);
+  border-collapse: collapse;
+}
+
+.ranking table th {
+  background-color: var(--secondary-color);
+  color: var(--background-color);
+  text-align: center;
+  border: 1px solid rgb(207, 207, 207);
+}
+
+.ranking table td {
+  padding: 10px 20px;
+  border: 1px solid rgb(207, 207, 207);
+}
+
+.ranking table tbody tr:nth-child(odd) {
+  background-color: var(--background-color);
+}
+
+.ranking table tbody tr:nth-child(even) {
+  background-color: color-mix(
+    in hsl shorter hue,
+    var(--secondary-color) 17.7%,
+    #ffffff 2.8%
+  );
+}
+
+/* Rating por estrellas */
+
+.rating {
+  display: flex; /* Pone las estrellas en línea */
+  gap: 5px; /* Separación entre estrellas */
+}
+
+td .rating {
+  justify-content: center;
+}
+
+.rating-star,
+.rating-star-filled {
+  width: 18px;
+  height: 18px;
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+
+.rating-star {
+  background-image: url("../../assets/icons/pages/rating_star.svg");
+}
+
+.rating-star-filled {
+  background-image: url("../../assets/icons/pages/rating_star_fill.svg");
+}
