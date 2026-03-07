@@ -39,7 +39,7 @@
   line-height: 1.6;
 }
 
-/* CATÁLOGO */
+/* CATÁLOGO PRIMERO */
 
 .catalogo {
   margin-top: 20px;
@@ -48,7 +48,7 @@
 .item {
   display: flex;
   align-items: flex-start;
-  justify-content: space-between;
+  justify-content: center;
   gap: 40px;
   margin: 40px 0;
 }
@@ -75,8 +75,9 @@
   height: 100%;            /* Ocupa toda la altura */
   object-fit: cover;       /* Recorta sin deformar */
   display: block;
+  margin: 0;
 }
-.item__desc {
+.item_desc {
   line-height: 1.8;
 }
 
