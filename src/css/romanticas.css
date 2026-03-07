@@ -1,0 +1,95 @@
+.cabecera {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+.cabecera_images {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+    width: 100%;
+}
+
+.cabecera_images img {
+    max-height: 300px;
+    max-width: 27.4%;  /* 4 imágenes = 25% cada una */
+    width: auto;
+    height: auto;
+    object-fit: cover;  /* Para que llenen su espacio */
+}
+
+section {
+    margin: 30px 0;
+    padding: 1px 0;
+}
+
+.listado {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+.listado article {
+    display: flex;
+    gap: 15px;
+}
+
+.listado article.texto_foto {
+    flex-direction: row-reverse;
+}
+.listado article.foto_texto {
+    flex-direction: row;
+}
+
+.listado_imagen, .listado_imagen img {
+    max-width: 500px;
+}
+
+.listado_link{
+    width: 100%;
+    margin: 30px 0;
+}
+
+.listado_link a.btn:hover,.listado_link a.btn:focus, .listado_link a.btn:active{
+    color: var(--text-button-color);
+    text-decoration: none;
+}
+
+
+.ranking {
+    width: 100%;
+}
+.ranking table {
+    max-width: 500px;
+    text-align: center;
+    margin: 0 auto;
+    border: 1px solid rgb(207, 207, 207);
+    border-collapse: collapse;
+}
+
+.ranking table th {
+    background-color: var(--secondary-color);
+    color: var(--background-color);
+    text-align: center;
+    border: 1px solid rgb(207, 207, 207);
+}
+
+.ranking table td {
+    padding: 10px 20px;
+    border: 1px solid rgb(207, 207, 207);
+}
+
+.ranking table td span.valoracion {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.ranking table tbody tr:nth-child(odd) {
+    background-color: var(--background-color);
+}
+
+.ranking table tbody tr:nth-child(even) {
+    background-color: color-mix(in hsl shorter hue, var(--secondary-color) 17.7%, #FFFFFF 2.8%);
+   
+}
