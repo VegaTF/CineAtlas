@@ -357,3 +357,20 @@ footer p {
     filter: brightness(0) saturate(100%) invert(23%) sepia(94%) saturate(5573%) hue-rotate(360deg) brightness(98%) contrast(93%);
   }
 }
+
+/* Cards categorías con gifs al hacer hover */
+.categoria_card.animacion {
+  background-image: url("../../assets/img/animacion/Spirited_Away_058.jpg");
+}
+
+.categoria_card.animacion:hover {
+  background-image: url("../../assets/img/animacion/spirited_away_animated.gif");
+}
+
+.categoria_card.historicas {
+  background-image: url("../../assets/img/historicas/peaky blinders.jpg");
+}
+
+.categoria_card.historicas:hover {
+  background-image: url("../../assets/img/historicas/peaky_blinders_animated.gif");
+}
