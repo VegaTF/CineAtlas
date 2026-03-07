@@ -39,66 +39,62 @@
   line-height: 1.6;
 }
 
-/* CATÁLOGO PRIMERO */
+/* CATÁLOGO */
 
 .catalogo {
   margin-top: 20px;
 }
 
-.item {
-  display: flex;
-  align-items: flex-start;
-  justify-content: center;
-  gap: 40px;
-  margin: 40px 0;
-}
 
 /* Alterna el orden */
 .item:nth-child(even) {
   flex-direction: row-reverse;
 }
 
-/*CATALOGOOOOOOO*/
-.item__media {
-  display: flex;           /* Habilita flex en el contenedor */
-  justify-content: center; /* Esto es pa centrar la imagen horizontalmente */
-  align-items: center;     /* Verticalmente */
-  flex: none;              
-  width: 50%;              
-  max-width: 500px;        /*Tamaño máximo porque si no, se ve muy pequeño*/
-  aspect-ratio: 16 / 9;    /*Proporcion correcta*/
-  overflow: hidden;
+.item {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 40px;
+  margin: 40px 0;
 }
 
-.item__img {
-  width: 100%;             /* Ocupa todo el contenedor */
-  height: 100%;            /* Ocupa toda la altura */
-  object-fit: cover;       /* Recorta sin deformar */
-  display: block;
-  margin: 0;
-}
 .item_desc {
-  line-height: 1.8;
+  line-height: 1.6;
 }
 
 /* Botón del item alineado a la derecha */
 .item__btn {
   align-self: flex-end;
+  width: fit-content;
   margin-top: 20px;
 }
 
 /* Imagen del catálogo con tamaño consistente */
 .item__media {
-  aspect-ratio: 16 / 9;
-  overflow: hidden;
-}
+  flex: 1;
+  min-width: 280px;
 
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
 .item__img {
   width: 100%;
-  height: 100%;
+  max-width: 450px;
+  height: auto;
   object-fit: cover;
-  object-position: center;
   display: block;
+  margin: 0 auto;
+
+}
+
+.item_texto {
+  flex: 1;
+  min-width: 280px;
+
+  display: flex;
+  flex-direction: column;
 }
 
 /* RESPONSIVE */
@@ -117,8 +113,33 @@
     flex-direction: column;
   }
 }
+/*responsive al canto*/
+@media (max-width: 768px) {
+
+  .timeline-section {
+    flex-direction: column;
+    align-items: center;
+  }
+
+}
 
 
+
+.timeline-section {
+  display: flex;
+  gap: 40px;
+  justify-content: center;
+  align-items: flex-start;
+  margin-top: 40px;
+}
+
+.timeline {
+  flex: 1;
+  max-width: 500px;
+}
+
+
+/*RANKING*/
 .ranking {
     width: 100%;
 }
@@ -160,4 +181,8 @@
 .section-subtitle {
     text-align: center;
     width: 100%;
+}
+
+.ranking p {   /*PARA EL TEXTO DEBAJO DE LA TABLA*/
+  margin-top: 30px;
 }
