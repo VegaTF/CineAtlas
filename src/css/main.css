@@ -14,6 +14,10 @@
     --color-star: #d6c100;
 }
 
+html, body {
+    height: 100%; /* Que el contenido ocupe el espacio disponible */
+}
+
 body {
     margin: 0;
     padding: 0;
@@ -24,7 +28,15 @@ body {
     font-weight: var(--font-weight-texto);
     font-style: normal;
     color: var(--text-color);
-    
+
+    /* Que el contenido ocupe el espacio disponible */
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+main {
+    flex: 1; /* Que el contenido ocupe el espacio disponible */
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -212,8 +224,6 @@ footer {
   padding: 20px;
   margin-top: 60px; /* Separación con el contenido */
   width: 100%;
-  position: fixed;
-  bottom: 0;
 }
 
 footer p {
