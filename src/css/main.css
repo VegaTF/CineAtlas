@@ -19,7 +19,6 @@ html, body {
 }
 
 body {
-    margin: 0;
     padding: 0;
     background-color: var(--background-color);
     box-sizing: border-box;
@@ -140,7 +139,6 @@ header {
 /* Contenedor del menú */
 nav#menu {
   display: flex;
-  width: 100%;
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
@@ -223,7 +221,6 @@ footer {
   text-align: center;
   padding: 20px;
   margin-top: 60px; /* Separación con el contenido */
-  width: 100%;
 }
 
 footer p {
