@@ -117,3 +117,14 @@
   color: var(--text-button-color);
   text-decoration: none;
 }
+
+/* Títulos de sección */
+h3.section-title {
+  margin-top: 0px;
+}
+
+/* Línea roja debajo del título */
+h3.section-title::after {
+  width: 150px;
+  height: 2px;
+}
