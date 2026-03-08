@@ -36,7 +36,7 @@
 
 .intro__text p {
   flex: 1;
-  line-height: 1.6;
+  line-height: 1.8;
 }
 
 /* CATÁLOGO */
@@ -64,25 +64,21 @@
 }
 
 /* Botón del item alineado a la derecha */
-.item__btn {
-  align-self: flex-end;
+.item_btn {
+  margin-top: auto;
   width: fit-content;
-  margin-top: 20px;
 }
 
 /* Imagen del catálogo con tamaño consistente */
 .item__media {
-  flex: 1;
-  min-width: 280px;
-
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  align-self: stretch;
+  overflow: hidden;
 }
+
 .item__img {
   width: 100%;
   max-width: 450px;
-  height: auto;
+  height: 100%;
   object-fit: cover;
   display: block;
   margin: 0 auto;
