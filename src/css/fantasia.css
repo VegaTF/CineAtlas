@@ -145,10 +145,12 @@
     background-color: var(--background-color);
 }
 
-.ranking table tbody tr:nth-child(even) {
-    background-color: color-mix(in hsl shorter hue, var(--secondary-color) 17.7%, #FFFFFF 2.8%);
-   
+.ranking table tbody tr:nth-child(even) { /*Habia color-mix pero el validador no ha dejado hacerlo, 
+  se ha probado con fallback pero no ha resultado*/
+
+    background-color: var(--color-hover);
 }
+   
 
 .section-subtitle {
     text-align: center;
