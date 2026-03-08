@@ -3,29 +3,43 @@
 <!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
 <!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
 <!--[if gt IE 8]>      <html class="no-js"> <!-<![endif]-->
+
+<!--Declaración del idioma utilizado para la configuración adecuada del HTML-->
 <html lang="es">
     <head>
+        <!--Configuración predeterminada para soportar tildes y caracteres especiales-->
         <meta charset="utf-8">
+        <!--Compatibilidad con Internet Explorer-->
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <!--Titulo de la pestaña del navegador-->
         <title>Ciencia Ficción - CineAtlas</title>
+        <!--Descripción para la búsqueda desde el navegador-->
         <meta name="description" content="¡Echa un vistazo a las mejores recomendaciones de películas y series de fantasía de CineAtlas!">
+        <!--Diseño responsive para que se adapte la página al ancho del dispositivo que la abre-->
         <meta name="viewport" content="width=device-width, initial-scale=1">
 
-        <!-- Favicons -->
+        <!-- Favicons: iconos que aparecen en la pestaña del navegador-->
         <link rel="icon" href="../favicon.ico" sizes="any">
         <link rel="icon" type="image/png" sizes="16x16" href="../assets/icons/favicon-16x16.png">
         <link rel="icon" type="image/png" sizes="32x32" href="../assets/icons/favicon-32x32.png">
+        <!--Este icono es especial para los dispositivos de Apple-->
         <link rel="apple-touch-icon" sizes="180x180" href="../assets/icons/apple-touch-icon.png">
+         <!--Manifest para comportamiento PWA: es un archivo JSON que le dice al navegador cómo debe comportarse la web cuando un usuario la instala como aplicación en su dispositivo-->
         <link rel="manifest" href="../assets/icons/site.webmanifest">
+        <link rel="manifest" href="../assets/icons/site.webmanifest">
+        <!--Link referencia a los diferentes css. Normalize resetea los estilos del navegador, main son los estilos globales y fantasia.css son los estilos propios de la página-->
         <link rel="stylesheet" href="../src/css/normalize.css">
         <link rel="stylesheet" href="../src/css/main.css">
         <link rel="stylesheet" href="../src/css/cienciaficcion.css">
     </head>
 
+    <!--Cabecera de la página con la barra de navegación-->
     <body>
         <header>
             <nav id="menu">
+                <!--Este logo redirige a la página de inicio gracias al link con index-->
                 <a href="../index.html"><img id="logo" alt="CineAtlas Logo" src="../assets/img/logo_white.png"></a>
+                <!--Esta lista desorganizada <ul> constituye el menu de navegación con los enlaces a todas las páginas de género-->
                 <ul>
                     <li><a href="../index.html">Inicio</a></li>
                     <li><a href="../pages/terror.html">Terror</a></li>
@@ -39,15 +53,19 @@
                 </ul>
             </nav>
         </header>
+
+        <!--CONTENIDO PRINCIPAL DE LA PÁGINA WEB-->
         <main class="genre-page">
+            <!--"Contenedor" centrado cuyo ancho máximo se ha definido en el css correspondiente para priorizar buena visibilidad en todo su contenido-->
             <div class="container">
                 <section  class="genre" id="cienciaficcion">
 
-                    <!-- Título de la sección -->
+                    <!--Sección principal del género de fciencia ficcion-->
                     <h2 class="section-title">CIENCIA FICCIÓN</h2>
 
-                    <!-- INTRO -->
+                    <!--Sección de introducción al género fantasía con su respectivo texto e imágenes a modo de presentación-->
                     <section class="intro" aria-label="Introducción al género de Ciencia Ficción">
+                        <!--Bloque de imágenes ilustrativas + descripción de cada una de ellas-->
                         <div class="intro__images">
                             <div class="intro__image">
                                 <img src="../assets/img/cienciaficcion/interestelar.jpg" alt="Imagen visual de la película Interestellar (2014)">
@@ -57,7 +75,8 @@
                             </div>
                         </div>
 
-                        <div class="intro_text">
+                        <!--Texto introductorio del género de ciencia ficcion-->
+                        <div class="intro__text">
                             <p class="text-center">
                                 La ciencia ficción no solo imagina el futuro y nos transporta a un "mundo distópico", sino que desafía las leyes de lo real y posible para
                                 cuestionar quienes somos y donde vamos. Haciendo uso de tecnologías asombrosas y viajes espaciales, este género nos invita a explorar
@@ -68,20 +87,24 @@
                             <p class="text_center">
 
                                 ¿Te gusta soñar con el espacio exterior y desear poder subirte al <em>Halcón Milenario</em> de la mano de <em>Darth Vader</em>? 
-                                ¿O prefieres vivir entre androides como en <em>Blade Runner</em>?
+                                ¿O prefieres vivir entre androides como en <em>Blade Runner</em>? <!--También se han usado etiquetas especiales de texto-->
                             </p>
 
                             <p class="text-center">
                                 En CineAtlas te ofreceremos las mejores recomendaciones para que te des un paseo por el espacio.
                             </p>
 
+                            <!--Este está divido en párrafos direferentes para alinearlos en columnas en el CSS-->
+
                         </div>
 
                     </section>
 
-                    <!--CATALOGO-->
+                    <!--Catalogo de dos películas recomendadas del genero fantasia-->
                     <section class="catalogo" aria-label="Películas de ciencia ficcion">
+                        <!--Primera película. Cada <article> representa una "tarjeta" de presentación de una sola película-->
                         <article class="item">
+                            <!--Bloque de texto con título, descripción y enlace de la película en un botón-->
                             <div class="item_texto">
                                 <h3 class="item_titulo">Proyecto Hail Mary</h3>
                                 <p class="item_desc">
@@ -93,6 +116,7 @@
 
                                 </p>
 
+                                <!--Este es el botón de enlace externo a la ficha en IMDb de la película. Se abrirá en una nueva pestaña-->
                                 <a class="btn item_btn"
                                     href=https://www.imdb.com/es-es/title/tt12042730/
                                     target="_blank"
@@ -102,12 +126,14 @@
                                 </a>
                             </div>
 
+                            <!--Imagen escogida de la película-->
                             <div class="item__media">
                                 <img class="item__img" src="../assets/img/cienciaficcion/hailmary.jpg" alt="Ryan Gosling en Proyecto Hail Mary">
                             </div>
 
                         </article>
 
+                        <!--Esto sería el bloque de la segunda película escogida que sigue, exactamente, la misma nomenclatura que la anterior-->
                         <article class="item">
                             <div class="item_texto">
                                 <h3 class="item_titulo">Dune</h3>
@@ -135,19 +161,24 @@
                         </article>
                     </section>
 
+
+                    <!--Ranking en forma de tabla de algunas películas del género mejor valoradas y que recomendamos cada uno-->
                     <section class="ranking">
                         <h3 class="section-title"> Ranking </h3>
+                        <!--Texto introductorio al ranking modificado con su respectivo css-->
                         <h4 class="section-subtitle"> Entendemos que cueste elegir a qué planeta vas a ir. ¡Asi que te dejamos nuestras mejores recomendaciones!</h4>
                     
                 <table>
                     <thead>
-                        <tr>
+                        <tr> <!--Cada columna que se va a representar en la tabla-->
                             <th>Película</th>
                             <th>Valoración</th>
                         </tr>
                     </thead>
                     <tbody>
-                        <tr>
+                        <tr> 
+                            <!--Se escribe cada una de las películas recomendades + icono de estrella SVG para adornar la puntuación 
+                            Cada película tendrá exactamente la misma estructura dentro de la tabla o no se vería bien visualmente. Además de usar el mismo icono-->
                             <td>Inception</td>
                             <td><span class="valoracion">8.8/10 <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" class="icon_star"
                                         viewBox="0 0 24 24" fill="currentColor" role="presentation">
@@ -194,14 +225,17 @@
                     </tbody>
                 </table>
 
-                <p>
+                <p> <!--Presentación de la lista a continuación, para hacerlo diferente en estructura a fantasía, en vez de poner un h4 se hace en un párrafo anterior-->
                     No nos hemos olvidado de la saga más importante de la historia del cine de ciencia ficción. 
                     Star Wars o "La Guerra de las Galaxias" cobra un importante puesto en la cultura general y en CineAtlas te vamos a contar 
                     las dos maneras de poder disfrutar la saga. 
                 </p>
+
+                <!--Aqui comienza la sección de Timeline. 
+            Es decir, una lista organizada de películas recomendadas-->
             <section class="timeline-section">
 
-                <!-- Timeline orden cronológico -->
+                <!--Timeline orden cronológico-->
                 <div class="timeline">
                     <h3 class="section-title">Star Wars: Orden Cronológico</h3>
 
@@ -235,22 +269,23 @@
                 <li><span class="year">(2017)</span> <span class="titulo">Episodio VIII: Los últimos Jedi</span></li>
                 <li><span class="year">(2019)</span> <span class="titulo">Episodio IX: El ascenso de Skywalker</span></li>
                 </ul>
-                </div>
+                    </div> <!--Fin del timeline por orden de estreno-->
 
-            </section>
+                </section> <!--Fin de timeline-section-->
 
-            </section>
+            </section> <!--Fin de ranking-->
 
-                    </section>
+        </section> <!--Fin de ranking-->
 
-            </div>
-        </main>
+    </div> <!--Fin de ranking-->
+</main>
 
 
-
+    <!--Pie de página con copyright-->
     <footer>
         <p>&copy; 2026 CineAtlas. Todos los derechos reservados.</p>
     </footer>
+    <!--Scrip principal que carga para no bloquear el renderizado -->
     <script src="../src/js/main.js" async defer></script>
 </body>
 
