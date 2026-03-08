@@ -10,7 +10,7 @@
     --font-family: "Montserrat", sans-serif;
     --font-weight-titulos: 300;
     --font-weight-texto: 400;
-    --color-hover: color-mix(in hsl shorter hue, var(--secondary-color) 100%, #000000 19.4%);
+    --color-hover: #AF2A42;
     --color-star: #d6c100;
 }
 
@@ -23,7 +23,7 @@ body {
     background-color: var(--background-color);
     box-sizing: border-box;
     font-family: var(--font-family);
-    font-optical-sizing: auto;
+    /* font-optical-sizing: auto; Otra cosa que no valida jigsaw */
     font-weight: var(--font-weight-texto);
     font-style: normal;
     color: var(--text-color);
@@ -287,6 +287,13 @@ footer p {
   display: flex;
   gap: 20px;
 }
+
+#bienvenida article h3 {
+    margin: 0 0 20px 0;
+    font-weight: 500;
+}
+
+
 #bienvenida article img{
   max-width: 100%;
   height: auto;
