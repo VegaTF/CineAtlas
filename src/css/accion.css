@@ -1,3 +1,4 @@
+/* Sección de cabecera */
 .cabecera {
     display: flex;
     flex-direction: column;
@@ -34,6 +35,11 @@ section {
     gap: 15px;
 }
 
+.listado article h3 {
+    margin: 0 0 20px 0;
+    font-weight: 500;
+}
+
 .listado article.texto_foto {
     flex-direction: row-reverse;
 }
@@ -55,7 +61,7 @@ section {
     text-decoration: none;
 }
 
-
+/* Sección de ranking */
 .ranking {
     width: 100%;
 }
@@ -90,6 +96,6 @@ section {
 }
 
 .ranking table tbody tr:nth-child(even) {
-    background-color: color-mix(in hsl shorter hue, var(--secondary-color) 17.7%, #FFFFFF 2.8%);
-   
+     /* El validador no me ha dejado poner un color-mix porque es una regla relativamente moderna */
+    background-color: var(--color-hover);   
 }
