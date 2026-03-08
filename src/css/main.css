@@ -1,48 +1,61 @@
+/* Importación de la fuente Montserrat desde Google Fonts en sus variantes normal e itálica */
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital@0;1&display=swap');
+/* Importación de Montserrat en peso 300 (light) para títulos */
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,300;1,300&display=swap');
 
+
+/*VARIABLES GLOBALES
+Paleta de colores, tipografía y pesos de fuente
+reutilizables en todo el proyecto*/
 :root {
-    --primary-color: #171717;
-    --secondary-color: #de2547;
-    --background-color: #ffffff;
-    --text-color: #333;
-    --text-button-color: #ffffff;
-    --font-family: "Montserrat", sans-serif;
-    --font-weight-titulos: 300;
-    --font-weight-texto: 400;
-    --color-hover: #AF2A42;
-    --color-star: #d6c100;
+    --primary-color: #171717; /*Negro: Fondo de footer y header*/
+    --secondary-color: #de2547; /*Rojo: Color secundario elegido para botones y detalles*/
+    --background-color: #ffffff; /*Blanco: Fondo general de la página. Sobre todo los subgéneros*/
+    --text-color: #333; /*Gris oscuro: color del texto general */
+    --text-button-color: #ffffff; /*Blanco: color del texto de los botones */
+    --font-family: "Montserrat", sans-serif; /*Fuente Montserrat importada, indicada anteriormente*/
+    --font-weight-titulos: 300; /*Light: títulos más finos y elegantes */
+    --font-weight-texto: 400; /*Regular: peso estándar para el texto */
+    --color-hover: #AF2A42; /*Rojo oscuro: color al pasar el cursor */
+    --color-star: #d6c100; /*Amarillo: color del icono de estrella del ranking */
 }
 
+/*ESTRUCTURA BASE
+Altura y disposición general de la página*/
 html, body {
-    height: 100%; /* Que el contenido ocupe el espacio disponible */
+    height: 100%; /* Que el contenido ocupe el espacio disponible. Es decir, el HTML y el body ocupan toda la altura de la ventana*/
 }
 
 body {
-    padding: 0;
-    background-color: var(--background-color);
-    box-sizing: border-box;
+    padding: 0; /* Sin relleno exterior para que ocupe todo el ancho */
+    background-color: var(--background-color); /* Fondo blanco definido en las variables */
+    box-sizing: border-box; /* Paddin y border incluidos en el ancho total*/
     font-family: var(--font-family);
     /* font-optical-sizing: auto; Otra cosa que no valida jigsaw */
     font-weight: var(--font-weight-texto);
     font-style: normal;
     color: var(--text-color);
 
-    /* Que el contenido ocupe el espacio disponible */
+    /* Flexbox en columna para que el footer siempre quede pegado abajo */
     display: flex;
     flex-direction: column;
     min-height: 100vh;
 }
 
+
 main {
     flex: 1; /* Que el contenido ocupe el espacio disponible */
 }
 
+/*TIPOGRAFÍA
+Estilos globales de títulos y párrafos*/
+/* Todos los títulos usan el peso light definido en las variables */
 h1, h2, h3, h4, h5, h6 {
     font-weight: var(--font-weight-titulos);
-    font-style: normal;
+    font-style: normal; /*Sin cursiva, sin ningun efecto extra*/
 }
 
+/*Diferentes tamaños de la fuente dependiendo del header*/
 h1 {
     font-size: 3em;
 }
@@ -55,38 +68,53 @@ h3 {
     font-size: 2em;
 }
 
+/* Margen inferior en los párrafos para separación entre bloques de texto */
 p {
     margin: 0 0 1em 0;
 }
 
-/* Estilos para enlaces */
+
+/*ENLACES*/
+/* Sin subrayado por defecto y heredando el color del contenedor */
 a {
     text-decoration: none;
     color: inherit;
 }
 
+/* Al interactuar con el enlace se muestra en rojo oscuro con subrayado
+Hover: estado activado al pasar el cursor por encima 
+Focus: Cuando está seleccionado el elemento con el teclado 
+Active: justo cuando se hace click se activa
+Visited (aunque no salga lo pongo para tenerlo presente): se marca al haber entrado ya en el enlace*/
 a:hover, a:focus, a:active {
     color: var(--color-hover);
     text-decoration: underline;
 }
 
+/*LISTAS*/
 /* Estilos para listas */
 ul, ol {
     padding-left: 20px;
     text-decoration: none;
 }
 
+/* Los elementos de lista se muestran en línea (usados en el menú de navegación) */
 li {
   display: inline-block;
 }
 
+/*TABLAS*/
 /* Estilos para tablas */
+/* Bordes colapsados y ancho completo por defecto para todas las tablas */
 table {
     border-collapse: collapse;
     width: 100%;
 }
 
-/* Botones */
+
+/*BOTONES
+Estilo para los botones*/
+/*Configuración de los botones predefinida en las variables anteriormente*/
 .btn {
     background-color: var(--secondary-color);
     color: var(--text-button-color);
@@ -95,40 +123,44 @@ table {
     cursor: pointer;
 }
 
+/* Al interactuar sube ligeramente y oscurece el color para dar sensación de clic */
 .btn:hover, .btn:focus, .btn:active {
     background-color: var(--color-hover);
     position: relative;
     top: -1px;
 }
 
-/* Iconos */
 
+/* ICONOS
+Estilo para los iconos */
+/* Tamaño base de los iconos SVG */
 .icon {
   width: 60px;
   height: auto;
 }
 
+/* Si un h2 contiene un icono, se alinea en fila con él */
 h2:has(.icon) {
   display: flex;
   align-items: center;
   gap: 10px;
 }
 
-/* CONTENEDOR GENERAL */
+/* CONTENEDOR GENERAL
+Centra el contenido y limita el ancho máximo */
 .container {
   max-width: 1200px;
   margin: 0 auto;
   padding: 20px;
 }
 
-/* Header / Menú principal */
-
-/* Barra superior negra */
+/* HEADER / MENÚ PRINCIPAL DE NAVEGACIÓN */
+/* Barra superior negra en todo lo ancho */
 header {
   background-color: var(--primary-color);
   width: 100%;
 }
-
+/* Logo con tamaño máximo controlado */
 #logo {
   width: 100%;
   max-width: 140px;
@@ -136,7 +168,7 @@ header {
   height: auto;
 }
 
-/* Contenedor del menú */
+/* Menú en fila con logo a la izquierda y enlaces a la derecha */
 nav#menu {
   display: flex;
   flex-direction: row;
@@ -148,20 +180,21 @@ nav#menu {
   padding: 10px 20px; /* Añado márgenes interiores*/
 }
 
-/* Enlaces del menú */
+/* Enlaces del menú, y su color secundario */
 nav#menu a {
   color: var(--secondary-color);
   font-size: 1em;
   padding: 0 10px;
 }
 
+/* Al interactuar se oscurece el color*/
 nav#menu a:hover, nav#menu a:focus, nav#menu a:active {
   color: var(--color-hover);
   text-decoration: none; /* Quito el subrayado de los enlaces del menú cuando tengo el cursor encima */
 }
 
-/* Títulos de sección */
 
+/* TÍTULOS DE SECCIÓN */
 .section-title {
   text-align: center;
   text-transform: uppercase; /* Siempre en mayúsculas */
@@ -169,33 +202,37 @@ nav#menu a:hover, nav#menu a:focus, nav#menu a:active {
   position: relative;
 }
 
+/*Color definido en las variables anteriores*/
 .subtitle {
   color: var(--background-color);
 }
 
 
-/* Línea roja debajo del título */
+/* Línea roja debajo del título. Esto realmente no necesita HTML extra (no sale en el código) ha sido generada utilizando unicamente css */
 .section-title::after {
   content: "";
   display: block;
   width: 200px;
   height: 3px;
-  background-color: var(--secondary-color);
-  margin: 10px auto 0 auto; /* Centra la línea */
+  background-color: var(--secondary-color); /*Color definido previamente*/
+  margin: 10px auto 0 auto; /* Centra la línea respecto al titulo*/
 }
 
-
+/*ICONITO DE ESTRELLITA DEL RANKING*/
+/* Color amarillo (definido anteriormente) para el SVG de estrella */
 .icon_star {
   fill: var(--color-star);
 }
 
-
+/*TIMELINE
+Lista vertical con línea conectora entre los distintos elementos de la lista, en recuadritos rojos*/
+/*Queremos los elementos apilados en columna centrados */
 .timeline ul {
   display: flex;
   flex-direction: column;
   align-items: center;
 }
-
+/* Cada elemento tiene fondo rojo y un conector vertical debajo */
 .timeline ul li {
   position: relative;
   margin-bottom: 40px;
@@ -203,6 +240,7 @@ nav#menu a:hover, nav#menu a:focus, nav#menu a:active {
   color: var(--background-color);
   padding: 10px;
 }
+/*Esta es la lína vertical que conecta cada elemento con el siguiente */
 .timeline ul li::after {
   content: "";
   position: absolute;
@@ -213,13 +251,14 @@ nav#menu a:hover, nav#menu a:focus, nav#menu a:active {
   background-color: var(--secondary-color);
 }
 
+/*El último elemento no tiene línea conectora debajo porque ya termina- No queremos que se una con ningun elemento mas*/
 .timeline ul li:last-child::after {
   display: none;
 }
 
 
-/* Footer negro y rojo */
-
+/*FOOTER*/
+/* Fondo negro con texto rojo, centrado*/
 footer {
   background-color: var(--primary-color);
   color: var(--secondary-color);
@@ -228,35 +267,36 @@ footer {
   margin-top: 60px; /* Separación con el contenido */
 }
 
+/* Le  quitamos el margen al párrafo del footer para que no añada espacio extra */
 footer p {
   margin: 0;
 }
 
 
-/*********************
-******** HOME ********
-**********************/
-
+/*HOME - SECCIÓN HERO*/
+/* Contenedor para poder posicionar el texto encima del vídeo */
 .hero {
   position: relative;
 }
-
+/* Vídeo a todo el ancho con altura máxima y oscurecido al 50% */
 .hero #hero-video {
   width: 100%;
   height: auto;
   max-height: 500px;
   object-fit: cover;
-  object-position: center 30%;
+  object-position: center 30%; /*En posicion central*/
   position: relative;
   filter: brightness(50%);
 }
 
+/* Texto posicionado encima del vídeo
+Se centra de manera vertical*/
 .hero .hero-text {
   position: absolute;
   width: 100%;
   top: 40%;
 }
-
+/* Título grande centrado con desplazamiento vertical para ajustar la posición */
 .hero .section-title {
   width: 100%;
   font-size: 5em;
@@ -265,6 +305,7 @@ footer p {
   margin-bottom: 0;
 }
 
+/* Icono de Finn el humano con solo los colores y posición ajustada con respecto al titulo (la animación va por otro lado)*/
 .hero .section-title .icon.finn {
   width: 90px;
   position: relative;
@@ -273,7 +314,7 @@ footer p {
   animation: colorinchis 1s linear infinite;
 }
 
-
+/* Subtítulo grande centrado debajo del título */
 .hero .subtitle {
   width: 100%;
   font-size: 2.7em;
@@ -283,20 +324,24 @@ footer p {
   margin: 0;
 }
 
+/*HOME — SECCIÓN BIENVENIDA
+Imagen y texto lado a lado */
+/* El article muestra imagen y texto en fila*/
 #bienvenida article {
   display: flex;
-  gap: 20px;
+  gap: 20px; /*Esto hace la separación entre texto e imagen*/
 }
 
+/* El título del article sin margen superior */
 #bienvenida article h3 {
     margin: 0 0 20px 0;
     font-weight: 500;
 }
 
-
+/* La imagen se adapta a su contenedor*/
 #bienvenida article img{
   max-width: 100%;
-  height: auto;
+  height: auto; /*No se deforma*/
 }
 
 .categorias_grid {
@@ -306,20 +351,25 @@ footer p {
   margin-top: 30px;
 }
 
+/* HOME — GRID DE CATEGORÍAS
+Tarjetas con imagen de fondo que enlazan a cada género*/
+/* Grid responsive: mínimo 250px por tarjeta, se adapta al ancho disponible */
+/* Cada tarjeta tiene imagen de fondo, altura mínima y esquinas redondeadas */
 .categoria_card {
   position: relative;
   display: flex;
   align-items: center;
   justify-content: center;
-  min-height: 200px;
+  min-height: 200px; /*Altura minima*/
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
-  border-radius: 8px;
+  border-radius: 8px; /*Aqui las esquinas redondeadas*/
   overflow: hidden;
   transition: transform 0.3s ease;
 }
 
+/*Capa oscura semitransparente sobre la imagen para que el texto sea legible o no vemos nada de la imagen*/
 .categoria_card::before {
   content: "";
   position: absolute;
@@ -331,6 +381,7 @@ footer p {
   transition: background-color 0.3s ease;
 }
 
+/*Título de la tarjeta por encima de la capa oscura gracias al z-index, esto va a controlar el orden de apilamiento de los elementos*/
 .categoria_card h3 {
   position: relative;
   z-index: 1;
@@ -342,20 +393,24 @@ footer p {
   text-transform: uppercase;
 }
 
+/* Al hacer hover la tarjeta sube ligeramente */
 .categoria_card:hover {
   transform: translateY(-5px);
 }
 
+/* Al hacer hover la capa oscura se aclara para dar sensación de iluminación */
 .categoria_card:hover::before {
   background-color: rgba(0, 0, 0, 0.3);
 }
-
+/* El título no cambia de color ni se subraya al hacer hover */
 .categoria_card:hover h3 {
   text-decoration: none;
   color: var(--background-color);
 }
 
-/* Animaciones */
+/*ANIMACIONES*/
+
+/* Animación de rotación de colores del icono de Finn en el hero */
 @keyframes colorinchis {
   0% {
     filter: brightness(0) saturate(100%) invert(23%) sepia(94%) saturate(5573%) hue-rotate(0deg) brightness(98%) contrast(93%);
