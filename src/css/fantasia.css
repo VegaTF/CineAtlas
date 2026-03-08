@@ -36,7 +36,7 @@
 
 .intro__text p {
   flex: 1;
-  line-height: 1.6;
+  line-height: 1.8;
 }
 
 /* CATÁLOGO PRIMERO */
@@ -60,20 +60,20 @@
 
 /*CATALOGOOOOOOO*/
 .item__media {
-  display: flex;           /* Habilita flex en el contenedor */
-  justify-content: center; /* Esto es pa centrar la imagen horizontalmente */
-  align-items: center;     /* Verticalmente */
+  flex: 1;         
+  justify-content: center; 
+  align-items: center;     
   flex: none;              
   width: 50%;              
-  max-width: 500px;        /*Tamaño máximo porque si no, se ve muy pequeño*/
-  aspect-ratio: 16 / 9;    /*Proporcion correcta*/
+  max-width: 500px;        
+  aspect-ratio: 16 / 9;    
   overflow: hidden;
 }
 
 .item__img {
-  width: 100%;             /* Ocupa todo el contenedor */
-  height: 100%;            /* Ocupa toda la altura */
-  object-fit: cover;       /* Recorta sin deformar */
+  width: 100%;             
+  height: 100%;            
+  object-fit: cover;       
   display: block;
   margin: 0;
 }
@@ -81,25 +81,16 @@
   line-height: 1.8;
 }
 
+
 /* Botón del item alineado a la derecha */
 .item__btn {
-  align-self: flex-end;
-  margin-top: 20px;
+    align-self: flex-start; /* Alinea el botón con el inicio del texto */
+    width: fit-content;    /* Para que el fondo rojo no se estire */
+    margin-top: 20px;
 }
 
-/* Imagen del catálogo con tamaño consistente */
-.item__media {
-  aspect-ratio: 16 / 9;
-  overflow: hidden;
-}
 
-.item__img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  object-position: center;
-  display: block;
-}
+
 
 /* RESPONSIVE */
 

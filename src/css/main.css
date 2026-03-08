@@ -357,3 +357,13 @@ footer p {
     filter: brightness(0) saturate(100%) invert(23%) sepia(94%) saturate(5573%) hue-rotate(360deg) brightness(98%) contrast(93%);
   }
 }
+
+/*FINN MUEVE LA CABECITA CUANDO PASAS POR EL*/
+.icon {
+    width: 50px;
+    transition: transform 0.5s;
+}
+
+.icon:hover {
+    transform: rotate(20deg);
+}
