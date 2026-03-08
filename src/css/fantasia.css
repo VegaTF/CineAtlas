@@ -36,7 +36,7 @@
 
 .intro__text p {
   flex: 1;
-  line-height: 1.6;
+  line-height: 1.8;
 }
 
 /* CATÁLOGO PRIMERO */
@@ -47,10 +47,17 @@
 
 .item {
   display: flex;
-  align-items: flex-start;
+  align-items: center;
   justify-content: center;
   gap: 40px;
   margin: 40px 0;
+}
+
+.item_texto {
+  flex: 1;
+  min-width: 0;
+  display: flex;
+  flex-direction: column;
 }
 
 /* Alterna el orden */
@@ -58,48 +65,34 @@
   flex-direction: row-reverse;
 }
 
-/*CATALOGOOOOOOO*/
+/*CATALOGOOOOOOO IMAGENES*/
 .item__media {
-  display: flex;           /* Habilita flex en el contenedor */
-  justify-content: center; /* Esto es pa centrar la imagen horizontalmente */
-  align-items: center;     /* Verticalmente */
-  flex: none;              
-  width: 50%;              
-  max-width: 500px;        /*Tamaño máximo porque si no, se ve muy pequeño*/
-  aspect-ratio: 16 / 9;    /*Proporcion correcta*/
-  overflow: hidden;
-}
-
-.item__img {
-  width: 100%;             /* Ocupa todo el contenedor */
-  height: 100%;            /* Ocupa toda la altura */
-  object-fit: cover;       /* Recorta sin deformar */
-  display: block;
-  margin: 0;
-}
-.item_desc {
-  line-height: 1.8;
-}
-
-/* Botón del item alineado a la derecha */
-.item__btn {
-  align-self: flex-end;
-  margin-top: 20px;
-}
-
-/* Imagen del catálogo con tamaño consistente */
-.item__media {
-  aspect-ratio: 16 / 9;
+  flex: none;
+  width: 40%;
+  max-width: 500px;
+  align-self: stretch; 
   overflow: hidden;
 }
 
 .item__img {
   width: 100%;
-  height: 100%;
+  height: 100%; 
   object-fit: cover;
-  object-position: center;
   display: block;
 }
+
+.item_desc {
+  line-height: 1.8;
+}
+
+
+/* Botón del item alineado a la derecha */
+.item_btn {
+  margin-top: auto; 
+  width: fit-content;
+}
+
+
 
 /* RESPONSIVE */
 
