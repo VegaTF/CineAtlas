@@ -4,30 +4,41 @@
 <!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
 <!--[if gt IE 8]>      <html class="no-js"> <!-[endif]-->
 
+<!--Declaración del idioma utilizado para la configuración adecuada del HTML-->
 <html lang="es">
     <head>
+        <!--Configuración predeterminada para soportar tildes y caracteres especiales-->
         <meta charset="utf-8">
+        <!--Compatibilidad con Internet Explorer-->
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <!--Titulo de la pestaña del navegador-->
         <title>Fantasía - CineAtlas</title>
+        <!--Descripción para la búsqueda-->
         <meta name="description" content="¡Echa un vistazo a las mejores recomendaciones de películas y series de fantasía de CineAtlas!">
+        <!--Diseño responsive para que se adapte la página al ancho del dispositivo que la abre-->
         <meta name="viewport" content="width=device-width, initial-scale=1">
 
-        <!-- Favicons -->
+        <!-- Favicons: iconos que aparecen en la pestaña del navegador -->
         <link rel="icon" href="../favicon.ico" sizes="any">
         <link rel="icon" type="image/png" sizes="16x16" href="../assets/icons/favicon-16x16.png">
         <link rel="icon" type="image/png" sizes="32x32" href="../assets/icons/favicon-32x32.png">
+        <!--Este icono es especial para los dispositivos de Apple-->
         <link rel="apple-touch-icon" sizes="180x180" href="../assets/icons/apple-touch-icon.png">
+        <!--Manifest para comportamiento PWA: es un archivo JSON que le dice al navegador cómo debe comportarse la web cuando un usuario la instala como aplicación en su dispositivo (móvil o escritorio).-->
         <link rel="manifest" href="../assets/icons/site.webmanifest">
+        <!--Link referencia a los diferentes css. Normalize resetea los estilos del navegador, main son los estilos globales y fantasia.css son los estilos propios de la página-->
         <link rel="stylesheet" href="../src/css/normalize.css">
         <link rel="stylesheet" href="../src/css/main.css">
         <link rel="stylesheet" href="../src/css/fantasia.css">
     </head>
 
+    <!--Cabecera de la página con la barra de navegación-->
     <body>
         <header>
             <nav id="menu">
+                <!--Este logo redirige a la página de inicio gracias al link con index-->
                 <a href="../index.html"><img id="logo" alt="CineAtlas Logo" src="../assets/img/logo_white.png"></a>
-                <ul>
+                <ul> <!--Esta lista desorganizada <ul> constituye el menu de navegación con los enlaces a todas las páginas de género-->
                     <li><a href="../index.html">Inicio</a></li>
                     <li><a href="../pages/terror.html">Terror</a></li>
                     <li><a href="../pages/drama.html">Drama</a></li>
@@ -40,15 +51,20 @@
                 </ul>
             </nav>
         </header>
+
+        <!--CONTENIDO PRINCIPAL DE LA PÁGINA WEB-->
         <main class="genre-page">
+            <!--"Contenedor" centrado cuyo ancho máximo se ha definido en el css correspondiente para priorizar buena visibilidad en todo su contenido-->
             <div class="container">
+                <!--Sección principal del género de fantasía-->
                 <section  class="genre" id="fantasia">
 
-                    <!-- Título de la sección -->
+                    <!--Título de la sección y el que se va a mostrar -->
                     <h2 class="section-title">FANTASÍA</h2>
 
-                    <!-- INTRO -->
+                    <!--Sección de introducción al género fantasía con su respectivo texto e imágenes a modo de presentación-->
                     <section class="intro" aria-label="Introducción del género fantástico">
+                        <!--Bloque de imágenes ilustrativas + descripción de cada una de ellas-->
                         <div class="intro__images">
                             <div class="intro__image">
                                 <img src="../assets/img/fantasia/loftr.jpg" alt="Primer poster de la película El señor de los Anillos">
@@ -57,13 +73,13 @@
                                 <img src="../assets/img/fantasia/narnia.jpg" alt="Elenco principal de la película Las Crónicas de Narnia: El Leon, la bruja y el armario">
                             </div>
                         </div>
-
+                        <!--Texto introductorio del género de fantasía-->
                         <div class="intro_text">
                             <p class="text-center">
                                 La fantasía como género cinematográfico y literario trasciende los límites de la realidad y permite representar situaciones, espacios y personajes que van más allá de nuestro día a día. <br><br>
 
                                 ¿Quién no ha querido alguna vez escapar del mundo que le rodea para lanzar algún hechizo como en <em>Harry Potter</em>
-                                o codearse con los dioses del Olimpo como en <em>Percy Jackson</em>? <br><br>
+                                o codearse con los dioses del Olimpo como en <em>Percy Jackson</em>? <br><br> <!--Se han utilizado etiquetas especiales de texto para aclarar títulos de películas. Y break points para cortar la continuación del texto-->
 
                                 En CineAtlas tenemos las recomendaciones necesarias para escapar un poco de la vida cotidiana.
 
@@ -73,9 +89,11 @@
 
                     </section>
 
-                    <!--CATALOGO-->
+                    <!--Catalogo de dos películas recomendadas del genero fantasia-->
                     <section class="catalogo" aria-label="Películas de fantasía">
+                        <!--Primera película. Cada <article> representa una "tarjeta" de presentación de una sola película-->
                         <article class="item">
+                            <!--Bloque de texto con título, descripción y enlace de la película en un botón-->
                             <div class="item_texto">
                                 <h3 class="item_titulo">Alicia en el País de las Maravillas (2010)</h3>
                                 <p class="item_desc">
@@ -85,7 +103,7 @@
                                     Con un elenco de actores y actrices digno para dar vida a personajes tan carismáticos... y algo <em>alocados</em>
 
                                 </p>
-
+                                <!--Este es el botón de enlace externo a la ficha en IMDb de la película. Se abrirá en una nueva pestaña-->
                                 <a class="btn item_btn"
                                     href=https://www.imdb.com/title/tt1014759/
                                     target="_blank"
@@ -95,12 +113,14 @@
                                 </a>
                             </div>
 
+                            <!--Imagen escogida de la película-->
                             <div class="item__media">
                                 <img class="item__img" src="../assets/img/fantasia/alicewonderland.jpg" alt="Alicia en el Pais de las Maravillas">
                             </div>
 
                         </article>
 
+                        <!--Esto sería el bloque de la segunda película escogida que sigue, exactamente, la misma nomenclatura que la anterior-->
                         <article class="item">
                             <div class="item_texto">
                                 <h3 class="item_titulo">El Laberinto del Fauno</h3>
@@ -127,19 +147,23 @@
                         </article>
                     </section>
 
+                    <!--Ranking en forma de tabla de algunas películas del género mejor valoradas y que recomendamos cada uno-->
                     <section class="ranking">
                         <h3 class="section-title"> Ranking </h3>
+                        <!--Texto introductorio al ranking modificado con su respectivo css-->
                         <h4 class="section-subtitle"> ¡Hay muchas películas de fantasía que poder disfrutar, pero si no sabes cuál elegir, ¿por qué no le echas un vistazo a nuestro ranking?</h4>
                     
                 <table>
                     <thead>
-                        <tr>
+                        <tr> <!--Cada columna que se va a representar en la tabla-->
                             <th>Película</th>
                             <th>Valoración</th>
                         </tr>
                     </thead>
                     <tbody>
                         <tr>
+                            <!--Se escribe cada una de las películas recomendades + icono de estrella SVG para adornar la puntuación 
+                            Cada película tendrá exactamente la misma estructura dentro de la tabla o no se vería bien visualmente. Además de usar el mismo icono-->
                             <td>El Señor de los Anillos: Las dos Torres</td>
                             <td><span class="valoracion">8.8/10 <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" class="icon_star"
                                         viewBox="0 0 24 24" fill="currentColor" role="presentation">
@@ -187,17 +211,23 @@
                 </table>
             </section>
 
+            <!--Aqui comienza la sección de Timeline. 
+            Es decir, una lista organizada de películas recomendadas-->
             <section class="timeline">
+                <!--Introducción a la lista-->
                 <h3 class="section-title">Timeline de la saga Harry Potter</h3>
                 <p class="section-subtitle">
+                    <!--Pequeño texto explicativo de la lista-->
                     Una de las mejores sagas de fantasía de la historia y con una gran cantidad de películas. <br>
                     ¡VAMOS A MOSTRARTE SU CRONOLOGÍA EN DETALLE POR ORDEN DE ACONTECIMIENTOS...!
 
                 </p>
+
+                <!--Aqui comienza la verdadera lista-->
                 <ul>
 
 
-                    <li><span class="year">(1997-1999)</span> <span class="titulo">Harry Potter y las Reliquias de la Muerte (Parte 1 y 2)</span></li>
+                    <li><span class="year">(1997-1999)</span> <span class="titulo">Harry Potter y las Reliquias de la Muerte (Parte 1 y 2)</span></li> <!--Se utiliza la etiqueta <span> para la modificación futura en CSS-->
                     <li><span class="year">(1996-1997)</span> <span class="titulo">Harry Potter y el misterio del príncipe Mestizo</span></li>
                     <li><span class="year">(1995-1996)</span> <span class="titulo">Harry Potter y la Orden del Fénix</span></li>
                     <li><span class="year">(1994-1995)</span> <span class="titulo">Harry Potter y el cáliz de fuego</span></li>
@@ -209,12 +239,16 @@
                     <li><span class="year">(1926)</span> <span class="titulo">Animales Fantásticos y donde encontrarlos</span></li>
                 </ul>
             </section>
-            </section>
-        </div>
+            </section> <!--Fin de la sección .genre-->
+        </div> <!--Fin del div .container-->
     </main>
+
+    <!--Pie de página con copyright-->
     <footer>
         <p>&copy; 2026 CineAtlas. Todos los derechos reservados.</p>
     </footer>
+
+    <!--Scrip principal que carga para no bloquear el renderizado -->
     <script src="../src/js/main.js" async defer></script>
 </body>
 
