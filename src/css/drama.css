@@ -1,59 +1,62 @@
-/* CONTENEDOR GENERAL */
+/* Centro y ancho */
 .container {
-  max-width: 1200px;
+  max-width: 1100px;
   margin: 0 auto;
-  padding: 20px;
+  padding: 24px;
 }
 
-/* INTRODUCCIÓN */
-
+/* Intro: imágenes y texto */
 .intro__images {
   display: flex;
-  gap: 20px;
-  margin: 30px 0;
+  gap: 18px;
+  margin: 28px 0;
 }
 
-/* Mantener la proporción */
 .intro__image {
   flex: 1;
   aspect-ratio: 16 / 9;
   overflow: hidden;
+  border-radius: 10px;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.12);
+  transition: transform 0.35s ease;
 }
 
 .intro__image img {
   width: 100%;
   height: 100%;
-  object-fit: cover; /* Recortar sin deformar */
+  object-fit: cover;
   object-position: center;
   display: block;
+  transition: transform 0.6s ease;
+}
+
+.intro__image:hover img {
+  transform: scale(1.04);
 }
 
 .intro__text {
   display: flex;
-  gap: 40px;
-  margin-bottom: 30px;
+  gap: 32px;
+  margin-bottom: 28px;
 }
 
 .intro__text p {
   flex: 1;
-  line-height: 1.6;
+  line-height: 1.65;
 }
 
-/* CATÁLOGO */
-
+/* Catálogo: fichas */
 .catalogo {
-  margin-top: 20px;
+  margin-top: 22px;
 }
 
 .item {
   display: flex;
-  align-items: flex-start;
-  justify-content: space-between;
-  gap: 40px;
-  margin: 40px 0;
+  align-items: stretch;
+  gap: 32px;
+  margin: 36px 0;
 }
 
-/* Alterna el orden */
 .item:nth-child(even) {
   flex-direction: row-reverse;
 }
@@ -61,26 +64,33 @@
 .item__texto,
 .item__media {
   flex: 1;
-  min-width: 280px;
-
+  min-width: 260px;
   display: flex;
   flex-direction: column;
 }
 
 .item__desc {
-  line-height: 1.6;
+  line-height: 1.65;
 }
 
-/* Botón del item alineado a la derecha */
+/* Botón: estilo simple */
 .item__btn {
   align-self: flex-end;
-  margin-top: 20px;
+  margin-top: 18px;
+  padding: 10px 14px;
+  background: var(--secondary-color);
+  color: var(--background-color);
+  border-radius: 6px;
+  border: none;
+  display: inline-block;
 }
 
-/* Imagen del catálogo con tamaño consistente */
+/* Media: marco y hover */
 .item__media {
   aspect-ratio: 16 / 9;
   overflow: hidden;
+  border-radius: 8px;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.08);
 }
 
 .item__img {
@@ -89,10 +99,14 @@
   object-fit: cover;
   object-position: center;
   display: block;
+  transition: transform 0.5s ease;
 }
 
-/* RESPONSIVE */
+.item__media:hover .item__img {
+  transform: scale(1.03);
+}
 
+/* Responsive: apilar en móviles */
 @media (max-width: 768px) {
   .intro__images {
     flex-direction: column;
@@ -108,12 +122,87 @@
   }
 }
 
-/* SOBRESCRIBIR MAIN */
-/* Botones como enlace */
+/* Overrides: botones */
 .btn,
 .btn:hover,
 .btn:focus,
 .btn:active {
   color: var(--text-button-color);
   text-decoration: none;
+}
+
+/* Título: estilo básico */
+h3.section-title {
+  margin-top: 0px;
+}
+
+h3.section-title::after {
+  width: 150px;
+  height: 2px;
+  background: var(--secondary-color);
+  border-radius: 2px;
+  margin-top: 8px;
+  opacity: 0.95;
+  display: block;
+}
+
+/* Ranking: tabla centrada */
+.ranking {
+  width: 100%;
+  margin-bottom: 36px;
+}
+.ranking table {
+  max-width: 520px;
+  text-align: center;
+  margin: 0 auto;
+  border-collapse: collapse;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.04);
+}
+
+.ranking table th {
+  background-color: var(--secondary-color);
+  color: var(--background-color);
+  text-align: center;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.06);
+}
+
+.ranking table td {
+  padding: 12px 20px;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.04);
+}
+
+.ranking table tbody tr:nth-child(odd) {
+  background-color: rgba(255, 255, 255, 0.02);
+}
+
+.ranking table tbody tr:nth-child(even) {
+  background-color: rgba(0, 0, 0, 0.02);
+}
+
+/* Valoración: estrellas */
+.rating {
+  display: flex;
+  gap: 6px;
+}
+
+td .rating {
+  justify-content: center;
+}
+
+.rating-star,
+.rating-star-filled {
+  width: 20px;
+  height: 20px;
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+
+.rating-star {
+  background-image: url("../../assets/icons/pages/rating_star.svg");
+}
+
+.rating-star-filled {
+  background-image: url("../../assets/icons/pages/rating_star_fill.svg");
 }
