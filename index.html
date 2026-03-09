@@ -3,29 +3,46 @@
 <!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
 <!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
 <!--[if gt IE 8]>      <html class="no-js"> <![endif]-->
+
+<!--Declaración del idioma utilizado para la configuración adecuada del HTML-->
 <html lang="es">
     <head>
+        <!--Configuración predeterminada para soportar tildes y caracteres especiales-->
         <meta charset="utf-8">
+        <!--Compatibilidad con Internet Explorer-->
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <!--Título de la pestaña del navegador-->
         <title>CineAtlas</title>
+        <!--Descripción para motores de búsqueda-->
         <meta name="description" content="CineAtlas - página de recomendación de películas basada en la similitud de los géneros y las calificaciones de los usuarios.">
+        <!--Diseño responsive para que se adapte la página al ancho del dispositivo que la use-->
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        <!-- Favicons -->
+
+
+        <!-- Favicons iconos que aparecen en la pestaña del navegador-->
         <link rel="icon" href="./favicon.ico" sizes="any">
         <link rel="icon" type="image/png" sizes="16x16" href="./assets/icons/favicon-16x16.png">
         <link rel="icon" type="image/png" sizes="32x32" href="./assets/icons/favicon-32x32.png">
+        <!--Icono especial para dispositivos Apple-->
         <link rel="apple-touch-icon" sizes="180x180" href="./assets/icons/apple-touch-icon.png">
+        <!--Manifest para comportamiento PWA: archivo JSON que define cómo se comporta la web si se instala como app-->
         <link rel="manifest" href="./assets/icons/site.webmanifest">
+        <!--Links a los CSS. Normalize resetea estilos del navegador y main.css contiene los estilos globales, es decir, el css del index va a definir los estilos globales generales-->
         <link rel="stylesheet" href="./src/css/normalize.css">
         <link rel="stylesheet" href="./src/css/main.css">
     </head>
+
+
     <body>
+         <!--Aviso para navegadores muy antiguos (IE6 o inferior) que no soportan la web correctamente-->
         <!--[if lt IE 7]>
             <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="#">upgrade your browser</a> to improve your experience.</p>
         <![endif]-->
         <header>
             <nav id="menu">
+                <!--Pulsar el icono de CineAtlas deriva directamente a la página de inicio-->
                 <a href="./index.html"><img id="logo" alt="CineAtlas Logo" src="./assets/img/logo_white.png"></a>
+                <!--Lista desordenada con enlaces a todas las páginas de género-->
                 <ul>
                     <li><a href="./index.html">Inicio</a></li>
                     <li><a href="./pages/terror.html">Terror</a></li>
@@ -39,31 +56,47 @@
                 </ul>
             </nav>
         </header>
+
+         <!--CONTENIDO PRINCIPAL DE LA PÁGINA-->
         <main id="home">
+            <!--Sección hero: vídeo de fondo con título y subtítulo encima-->
             <section class="hero">
+                <!--Vídeo de fondo que se reproduce automáticamente, sin sonido y en bucle (mute&loop)-->
                 <video id="hero-video" src="./assets/video/hero_optimizado.mp4" autoplay muted loop></video>
+                <!--Texto superpuesto sobre el vídeo-->
                 <div class="hero-text">
+                    <!--Icono de Finn decorativo en formato SVG acompañando al titulo con animación en el respectivo css-->
                     <h1 class="section-title"><img class="icon finn" src="./assets/icons/pages/home/finn.svg" alt="Finn Icon" /> CineAtlas</h1>
+                    <!--Titulo principal de bienvenida a la página-->
                     <p class="subtitle">¡El cine como nunca antes lo habías vivido!</p>
                 </div>
             </section>
+
+             <!--Contenedor centrado con ancho máximo definido en el CSS-->
             <div class="container">
+                <!--Sección de bienvenida con imagen y texto descriptivo de la web-->
                 <section id="bienvenida">
                     <h2>Bienvenido a CineAtlas</h2>
+                    <!--Article con imagen a un lado y texto al otro-->
                     <article id="intro-cineatlas">
+                        <!--Imagen ilustrativa de la sección. Localizada a la izquierda del texto-->
                         <div class="listado_imagen">
                             <img src="./assets/img/cinema_paradiso.jpg" alt="Escena de la película Cinema Paradiso">
                         </div>
                         <div class="listado_texto">
-                            <h3>¿Qué podras encontrar?</h3>
+                             <!--Texto explicativo de qué ofrece la web-->
+                            <h3>¿Qué podrás encontrar?</h3>
                             <p>En esta web podrás explorar una <strong>amplia variedad de películas</strong> y descubrir nuevas recomendaciones basadas en tus gustos.</p>
                             <p>Desde clásicos del cine hasta estrenos actuales, contamos con una colección curada especialmente para ti. Nuestro sistema inteligente analiza tus preferencias y te sugiere películas que se alinean perfectamente con tus intereses, garantizando que siempre encuentres algo nuevo y emocionante para ver.</p>
                             <p>Navega por nuestras categorías, lee reseñas y encuentra tu próxima película favorita. ¡Enjoy CineAtlas!</p>
                         </div>
                     </article>
                     </section>
+
+                <!--Sección de categorías: grid de "tarjetas" de presentación de los géneros que enlazan a cada página que se abre en la misma pestaña, no en una ventana nueva-->
                 <section id="categorias">
                     <h2>Explora por categorías</h2>
+                <!--Grid de tarjetas. Cada una tiene una imagen de fondo definida con style inline (basicamente usar css DENTRO del propio codigo html) y enlaza a su página-->
                     <div class="categorias_grid">
                         <a href="./pages/terror.html" class="categoria_card"
                             style="background-image: url('./assets/img/terror/hill-house.jpg');">
@@ -78,7 +111,7 @@
                             <h3>Animación</h3>
                         </a>
                         <a href="./pages/historicas.html" class="categoria_card"
-                            style="background-image: url('./assets/img/historicas/peaky blinders.jpg');">
+                            style="background-image: url('./assets/img/historicas/peaky_blinders.jpg');">
                             <h3>Históricas</h3>
                         </a>
                         <a href="./pages/cienciaficcion.html" class="categoria_card"
@@ -99,11 +132,14 @@
                         </a>
                     </div>
                 </section>
-            </div>
+            </div> <!--Fin del div .container-->
         </main>
+
+        <!--Pie de página con copyright-->
         <footer>
             <p>&copy; 2026 CineAtlas. Todos los derechos reservados.</p>
         </footer>
+        <!--Script principal cargado de forma asíncrona para no bloquear el renderizado-->
         <script src="./src/js/main.js" async defer></script>
     </body>
 </html>

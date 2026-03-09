@@ -1,50 +1,53 @@
-/* CONTENEDOR GENERAL */
+/* CONTENEDOR GENERAL 
+Este va a centrar el contenido para que todo se vea bien y va a limitar el ancho máximo*/
 .container {
   max-width: 1200px;
   margin: 0 auto;
   padding: 20px;
 }
 
-/* INTRODUCCIÓN */
+/* INTRODUCCIÓN 
+Bloque de imágenes y texto presentando el género*/
 
+/*Coloca las dos imágenes de introduccion una al lado de otra con separación entre ellas*/
 .intro__images {
   display: flex;
   gap: 20px;
   margin: 30px 0;
 }
 
-/* Mantener la proporción */
+/* Mantener la proporción. 
+Es decir, cada imagen va a ocupar el mismo espacio y va a mantener la proporcion asignada, en este caso 16:9*/
 .intro__image {
   flex: 1;
-  aspect-ratio: 16 / 9;
-  overflow: hidden;
+  aspect-ratio: 16 / 9; /* <-- Este va a mantener la proporcion de pantalla ancha*/
+  overflow: hidden; /* Oculta lo que sobresalga al recortar */
 }
 
+/*La imagen va a rellenar todo el contenedor sin deformarse*/
 .intro__image img {
   width: 100%;
   height: 100%;
-  object-fit: cover; /* Recortar sin deformar */
-  object-position: center;
-  display: block;
+  object-fit: cover; /* Recortar sin deformar la imagen */
+  object-position: center; /*Centra el recorte*/
+  display: block; /*Elimina el espacio extra que dejan estas imagenes*/
 }
 
-.intro__text {
-  display: flex;
-  gap: 40px;
-  margin-bottom: 30px;
-}
-
+/*Texto de introduccion con sus márgenes entre cada párrafo*/
+/*Cada párrafo ocupa el mismo espacio interlineado*/
 .intro__text p {
   flex: 1;
   line-height: 1.8;
 }
 
-/* CATÁLOGO PRIMERO */
 
+/* CATALOGO DE PELICULAS
+Cada imagen y texto de las peliculas recomendadas */
 .catalogo {
   margin-top: 20px;
 }
 
+/*Cada "tarjeta de presentacion" (que hemos definido antes) de cada pelicula se muestra con una imagen en fila y un texto de lado a lado*/
 .item {
   display: flex;
   align-items: center;
@@ -53,27 +56,32 @@
   margin: 40px 0;
 }
 
-.item_texto {
-  flex: 1;
-  min-width: 0;
+/*Este es el bloque de texto de la tarjeta de la pelicula y ocupa todo el espacio dispible y se pone en una columna*/
+.item__texto {
+  flex: 1; /*Que ocupe el contenedor*/
+  min-width: 0; /*Esto evita que el texto se "desborde"*/
   display: flex;
-  flex-direction: column;
+  flex-direction: column; /*Que se agrupe en columna*/
 }
 
-/* Alterna el orden */
+
+/* Esto lo usamos para alternar el orden. En este caso solo hay dos pelis pero esto nos ayudaria
+a que las pelis impares estén a la derecha y las pares a la izquierda en una especie de zig-zag */
 .item:nth-child(even) {
   flex-direction: row-reverse;
 }
 
-/*CATALOGOOOOOOO IMAGENES*/
+/*CATALOGOOOOOOO IMAGENES
+Este es el contenedor de la imagen con un tamaño fijo para que no se redimensione*/
 .item__media {
   flex: none;
   width: 40%;
   max-width: 500px;
-  align-self: stretch; 
+  align-self: stretch; /* Necesito que iguale la altura del bloque de texto para que no quede "escalonada, asi que debe estirarse*/
   overflow: hidden;
 }
 
+/*Basicamente la imagen rellena todo el contenedor de imagen (.item__media) sin deformarse*/
 .item__img {
   width: 100%;
   height: 100%; 
@@ -81,6 +89,7 @@
   display: block;
 }
 
+/*Interliniado para el texto para que no se vea todo "pegado"*/
 .item_desc {
   line-height: 1.8;
 }
@@ -88,15 +97,15 @@
 
 /* Botón del item alineado a la derecha */
 .item_btn {
-  margin-top: auto; 
-  width: fit-content;
+  margin-top: auto; /*Gracias a esto el boton se "empuja" hacia abajo del bloque de texto */
+  width: fit-content; /*El boton solo ocupa el ancho de su propio texto, si lo quitamos el botón se estira hasta igualar el tamaño del contenedor*/
 }
 
 
 
-/* RESPONSIVE */
+/* RESPONSIVE para pantallas PEQUEÑAS*/
 
-@media (max-width: 768px) {
+@media (max-width: 768px) { /*Por debajo de 768px todo se apila en columna*/
   .intro__images {
     flex-direction: column;
   }
@@ -112,44 +121,57 @@
 }
 
 
+
+/*RANKING DE PELICULAS*/
+
+/*La seccion ocupa todo el ancho disponible*/
 .ranking {
     width: 100%;
 }
+
+/* Tabla centrada con ancho máximo y bordes colapsados para evitar doble línea */
 .ranking table {
     max-width: 500px;
     text-align: center;
     margin: 0 auto;
     border: 1px solid rgb(207, 207, 207);
-    border-collapse: collapse;
+    border-collapse: collapse;  /* Une los bordes de celdas adyacentes en uno solo, asi no se ven dobles tambien*/
 }
 
+/* Cabecera de la tabla con colores definidos en las variables CSS globales */
 .ranking table th {
-    background-color: var(--secondary-color);
-    color: var(--background-color);
+    background-color: var(--secondary-color); /* Color secundario de la paleta */
+    color: var(--background-color); /* Color de texto adaptado al fondo */
     text-align: center;
     border: 1px solid rgb(207, 207, 207);
 }
 
+/* Celdas con padding para que el contenido respire */
 .ranking table td {
     padding: 10px 20px;
     border: 1px solid rgb(207, 207, 207);
 }
 
+/* La valoración se centra con flexbox para alinear el número y el icono de estrella */
 .ranking table td span.valoracion {
     display: flex;
     justify-content: center;
     align-items: center;
 }
 
+/* Filas impares con el color de fondo base del sitio */
 .ranking table tbody tr:nth-child(odd) {
     background-color: var(--background-color);
 }
 
-.ranking table tbody tr:nth-child(even) {
-    background-color: color-mix(in hsl shorter hue, var(--secondary-color) 17.7%, #FFFFFF 2.8%);
-   
+/* Filas pares con el color hover para diferenciarlas visualmente.*/
+.ranking table tbody tr:nth-child(even) { /*Habia color-mix pero el validador no ha dejado hacerlo, 
+  se ha probado con fallback pero no ha resultado*/
+    background-color: var(--color-hover);
 }
-
+   
+/*SUBTITULO DE SECCION. 
+Texto de los subtitulos centrado*/
 .section-subtitle {
     text-align: center;
     width: 100%;

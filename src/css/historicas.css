@@ -159,12 +159,19 @@ h3.section-title::after {
 }
 
 .ranking table tbody tr:nth-child(even) {
-  background-color: color-mix(
+  background-color: var(--color-hover)
     in hsl shorter hue,
     var(--secondary-color) 17.7%,
     #ffffff 2.8%
-  );
+  ;
 }
+
+.ranking table tbody tr:nth-child(even) { /*Habia color-mix pero el validador no ha dejado hacerlo, 
+  se ha probado con fallback pero no ha resultado*/
+
+    background-color: var(--color-hover);
+}
+
 
 /* Rating por estrellas */
 
