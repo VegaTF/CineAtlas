@@ -89,7 +89,12 @@ section {
     background-color: var(--background-color);
 }
 
-.ranking table tbody tr:nth-child(even) {
-    background-color: color-mix(in hsl shorter hue, var(--secondary-color) 17.7%, #FFFFFF 2.8%);
-   
+.ranking table tbody tr:nth-child(even) { /*Habia color-mix pero el validador no ha dejado hacerlo*/
+
+    background-color: var(--color-hover);
+}
+
+.listado_texto h4 {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
 }
