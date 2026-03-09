@@ -1,3 +1,4 @@
+/* Sección de cabecera */
 .cabecera {
     display: flex;
     flex-direction: column;
@@ -23,6 +24,8 @@ section {
     padding: 1px 0;
 }
 
+/* Sección de listado de películas */
+
 .listado {
     display: flex;
     flex-direction: column;
@@ -33,6 +36,12 @@ section {
     display: flex;
     gap: 15px;
 }
+
+.listado article h3 {
+    margin: 0 0 20px 0;
+    font-weight: 500;
+}
+
 
 .listado article.texto_foto {
     flex-direction: row-reverse;
@@ -55,7 +64,7 @@ section {
     text-decoration: none;
 }
 
-
+/* Sección de ranking */
 .ranking {
     width: 100%;
 }
@@ -89,12 +98,8 @@ section {
     background-color: var(--background-color);
 }
 
-.ranking table tbody tr:nth-child(even) { /*Habia color-mix pero el validador no ha dejado hacerlo,*/
-
-    background-color: var(--color-hover);
-}
-
-.listado_texto h4 {
-    font-size: 1.5rem;
-    margin-bottom: 10px;
+.ranking table tbody tr:nth-child(even) {
+    /* El validador no me ha dejado poner un color-mix porque es una regla relativamente moderna */
+    background-color: var(--color-hover);   
+   
 }
